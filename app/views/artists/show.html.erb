@@ -1,0 +1,13 @@
+<%= @artist.name %>
+<%= @artist.age %>
+<%= @artist.title %>
+<br>
+<% @artist.instruments.each do |instrument| %>
+
+<%= instrument.name %>
+<br>
+
+<% end %>
+
+<%= link_to  "Add an instrument", add_instrument_url(@artist) %>
+

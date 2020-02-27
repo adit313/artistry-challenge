@@ -1,0 +1,11 @@
+<h1> ADD INSTRUMENT TO <%= @artist.name %> </h1>
+
+<br>
+
+<%= form_tag :update_instruments do %>  
+  <%= hidden_field_tag :artist_id, @artist.id %>  
+  <%= label_tag :instrument %>  
+  <%= collection_select(:instrument, :id, @instruments, :id, :name) %>
+  <%= submit_tag "Forward" %>    
+<% end %>  
+
